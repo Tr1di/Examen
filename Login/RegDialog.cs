@@ -98,7 +98,7 @@ namespace Login
             // Пароль не должен содержать логин, иначе выдать ошибку
             if ( passwordTextBox.Text.Contains(loginTextBox.Text) ) 
             {
-                passwordError.SetError(passwordTextBox, "Пароль совпадает с логином");
+                passwordError.SetError(passwordTextBox, "Пароль содержит логин");
                 return false;
             }
 

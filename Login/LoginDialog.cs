@@ -15,20 +15,32 @@ namespace Login
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AuthorizeAs(User user)
         {
-            // Поиск пользователя по логину (почте)
-            User = User.ByLogin(emailTextBox.Text);
+            User = user;
 
             // Если пользователь найден и пароли совпдают, то войти
             if (User?.Password == Utils.EncryptPassword(passwordTextBox.Text))
             {
+                if ( checkBox1.Checked )
+                {
+                    Properties.Settings.Default.SavedLogin = User.Login;
+                    Properties.Settings.Default.SavedPasswword = User.Password;
+                    Properties.Settings.Default.Save();
+                }
+
                 DialogResult = DialogResult.OK;
             }
             else // Иначе выдать оишбку
             {
                 MessageBox.Show("Введены некорректные данные.", "Ошибка");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Поиск пользователя по логину (почте)
+            AuthorizeAs(User.ByLogin(emailTextBox.Text));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,8 +51,16 @@ namespace Login
             // Если пользователь зарегистрировался, то войти под этим пользователем
             if ( dialog.ShowDialog() == DialogResult.OK )
             {
-                User = dialog.User;
-                DialogResult = DialogResult.OK;
+                AuthorizeAs(dialog.User);
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if ( !checkBox1.Checked )
+            {
+                Properties.Settings.Default.SavedLogin = "";
+                Properties.Settings.Default.SavedPasswword = "";
             }
         }
     }

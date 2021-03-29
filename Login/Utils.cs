@@ -31,9 +31,6 @@ namespace Login
             // Пароль должен содержать цифры
             if (!Regex.IsMatch(password, @"\d+")) return false;
 
-            // Пароль должен содержать различные символы (перечислить необходимые через запятую в []) 
-            if (!Regex.IsMatch(password, @"[_, ?, \\]")) return false;
-
             return true;
         }
 

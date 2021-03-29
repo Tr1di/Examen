@@ -26,12 +26,24 @@ namespace Login.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SavedEmail {
+        public string SavedLogin {
             get {
-                return ((string)(this["SavedEmail"]));
+                return ((string)(this["SavedLogin"]));
             }
             set {
-                this["SavedEmail"] = value;
+                this["SavedLogin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SavedPasswword {
+            get {
+                return ((string)(this["SavedPasswword"]));
+            }
+            set {
+                this["SavedPasswword"] = value;
             }
         }
     }

@@ -84,7 +84,7 @@ namespace Login
             this.passwordTextBox.Location = new System.Drawing.Point(143, 25);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(125, 20);
-            this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
@@ -93,7 +93,7 @@ namespace Login
             this.loginTextBox.Location = new System.Drawing.Point(12, 64);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(125, 20);
-            this.loginTextBox.TabIndex = 1;
+            this.loginTextBox.TabIndex = 2;
             this.loginTextBox.TextChanged += new System.EventHandler(this.loginTextBox_TextChanged);
             // 
             // label3
@@ -110,7 +110,7 @@ namespace Login
             this.passwordConfirmTextBox.Location = new System.Drawing.Point(143, 64);
             this.passwordConfirmTextBox.Name = "passwordConfirmTextBox";
             this.passwordConfirmTextBox.Size = new System.Drawing.Size(125, 20);
-            this.passwordConfirmTextBox.TabIndex = 3;
+            this.passwordConfirmTextBox.TabIndex = 4;
             this.passwordConfirmTextBox.UseSystemPasswordChar = true;
             this.passwordConfirmTextBox.TextChanged += new System.EventHandler(this.passwordConfirmTextBox_TextChanged);
             // 
@@ -128,7 +128,7 @@ namespace Login
             this.emailTextBox.Location = new System.Drawing.Point(12, 25);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(125, 20);
-            this.emailTextBox.TabIndex = 7;
+            this.emailTextBox.TabIndex = 1;
             this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // label5
@@ -154,7 +154,7 @@ namespace Login
             this.patronymicTextBox.Location = new System.Drawing.Point(12, 181);
             this.patronymicTextBox.Name = "patronymicTextBox";
             this.patronymicTextBox.Size = new System.Drawing.Size(125, 20);
-            this.patronymicTextBox.TabIndex = 6;
+            this.patronymicTextBox.TabIndex = 7;
             // 
             // label8
             // 
@@ -170,7 +170,7 @@ namespace Login
             this.nameTextBox.Location = new System.Drawing.Point(12, 142);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(125, 20);
-            this.nameTextBox.TabIndex = 5;
+            this.nameTextBox.TabIndex = 6;
             // 
             // label9
             // 
@@ -186,7 +186,7 @@ namespace Login
             this.surnameTextBox.Location = new System.Drawing.Point(12, 103);
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(125, 20);
-            this.surnameTextBox.TabIndex = 4;
+            this.surnameTextBox.TabIndex = 5;
             // 
             // typeComboBox
             // 
@@ -215,7 +215,7 @@ namespace Login
             this.regButton.Location = new System.Drawing.Point(143, 178);
             this.regButton.Name = "regButton";
             this.regButton.Size = new System.Drawing.Size(125, 23);
-            this.regButton.TabIndex = 24;
+            this.regButton.TabIndex = 10;
             this.regButton.Text = "Зарегистрироваться";
             this.regButton.UseVisualStyleBackColor = true;
             this.regButton.Click += new System.EventHandler(this.regButton_Click);
@@ -226,7 +226,7 @@ namespace Login
             this.phoneTextBox.Mask = "8 (000) 000-00-00";
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(126, 20);
-            this.phoneTextBox.TabIndex = 25;
+            this.phoneTextBox.TabIndex = 8;
             // 
             // passwordError
             // 
