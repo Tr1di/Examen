@@ -56,7 +56,7 @@ namespace Login
             }
 
             // Если пользователь с такой почтой уже есть, то выдать ошибку
-            if ( User.ByEmail(loginTextBox.Text) != null )
+            if ( User.ByEmail(emailTextBox.Text) != null )
             {
                 emailError.SetError(emailTextBox, "Почта уже занята");
                 return false;
