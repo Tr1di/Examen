@@ -42,21 +42,21 @@ namespace Login
         private bool IsEmailValid()
         {
             // Если почта не введена, то выдать ошибку
-            if (emailTextBox.Text == "")
+            if ( emailTextBox.Text == "" )
             {
                 emailError.SetError(emailTextBox, "Введите почту");
                 return false;
             }
 
             // Если почта введена некорректно, то выдать ошибку
-            if (!Utils.IsValidEmail(emailTextBox.Text))
+            if ( !Utils.IsValidEmail(emailTextBox.Text) )
             {
                 emailError.SetError(emailTextBox, "Введите нормальную почту");
                 return false;
             }
 
             // Если пользователь с такой почтой уже есть, то выдать ошибку
-            if (User.ByLogin(loginTextBox.Text) != null)
+            if ( User.ByEmail(loginTextBox.Text) != null )
             {
                 emailError.SetError(emailTextBox, "Почта уже занята");
                 return false;
