@@ -37,7 +37,7 @@ namespace Login
             var dialog = new RegDialog();
 
             // Если пользователь зарегистрировался, то войти под этим пользователем
-            if (dialog.ShowDialog() != DialogResult.OK)
+            if ( dialog.ShowDialog() == DialogResult.OK )
             {
                 User = dialog.User;
                 DialogResult = DialogResult.OK;

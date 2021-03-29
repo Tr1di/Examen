@@ -12,6 +12,11 @@ namespace Login
         public virtual string Login { get; set; }
 
         /// <summary>
+        /// Уникальная почта пользователя
+        /// </summary>
+        public virtual string Email { get; set; }
+
+        /// <summary>
         /// Пароль пользователя
         /// </summary>
         /// <remarks>
@@ -52,11 +57,22 @@ namespace Login
         /// Возвращает пользователя по заданному логину
         /// </summary>
         /// <param name="login">Логин искомого пользователя</param>
-        /// <returns>Пользователя с поданным логином, если такого нет, то null</returns>
+        /// <returns>Пользователя с заданым логином, если такого нет, то null</returns>
         public static User ByLogin(string login)
         {
-            // Select * From User Where User.login = login
+            // Select * From User Where User.Login = login
             return DataBase.Session.QueryOver<User>().Where(x => x.Login == login).SingleOrDefault();
+        }
+
+        /// <summary>
+        /// Возвращает пользователя по заданной почте
+        /// </summary>
+        /// <param name="email">Почта искомого пользователя</param>
+        /// <returns>Пользователя с заданой почте, если такого нет, то null</returns>
+        public static User ByEmail(string email)
+        {
+            // Select * From User Where User.Email = email
+            return DataBase.Session.QueryOver<User>().Where(x => x.Email == email).SingleOrDefault();
         }
 
         /// <summary>
@@ -75,7 +91,8 @@ namespace Login
         public UserMap()
         {
             // Логин вводится пользователем вручную, поэтому не генерируется как в Tool
-            Id(x => x.Login);                    
+            Id(x => x.Login);
+            Map(x => x.Email).Unique();
             Map(x => x.Password);
 
             // Для изображений необходимо сделать максимальную длинну строки

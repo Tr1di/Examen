@@ -50,13 +50,15 @@ namespace Login
             this.regButton = new System.Windows.Forms.Button();
             this.phoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.passwordError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.emailError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.loginError = new System.Windows.Forms.ErrorProvider(this.components);
             this.confirmPasswordError = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.emailError = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.passwordError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.confirmPasswordError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailError)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -92,6 +94,7 @@ namespace Login
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(125, 20);
             this.loginTextBox.TabIndex = 1;
+            this.loginTextBox.TextChanged += new System.EventHandler(this.loginTextBox_TextChanged);
             // 
             // label3
             // 
@@ -229,9 +232,9 @@ namespace Login
             // 
             this.passwordError.ContainerControl = this;
             // 
-            // emailError
+            // loginError
             // 
-            this.emailError.ContainerControl = this;
+            this.loginError.ContainerControl = this;
             // 
             // confirmPasswordError
             // 
@@ -255,6 +258,10 @@ namespace Login
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 27;
             this.label10.Text = "Photo";
+            // 
+            // emailError
+            // 
+            this.emailError.ContainerControl = this;
             // 
             // RegDialog
             // 
@@ -287,8 +294,9 @@ namespace Login
             this.Name = "RegDialog";
             this.Text = "Регистрация";
             ((System.ComponentModel.ISupportInitialize)(this.passwordError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.confirmPasswordError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,9 +324,10 @@ namespace Login
         private System.Windows.Forms.Button regButton;
         private System.Windows.Forms.MaskedTextBox phoneTextBox;
         private System.Windows.Forms.ErrorProvider passwordError;
-        private System.Windows.Forms.ErrorProvider emailError;
+        private System.Windows.Forms.ErrorProvider loginError;
         private System.Windows.Forms.ErrorProvider confirmPasswordError;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider emailError;
     }
 }

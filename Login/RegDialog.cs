@@ -19,7 +19,7 @@ namespace Login
         private void regButton_Click(object sender, EventArgs e)
         {
             // Вход только если все данные введены корректно
-            if ( !IsLoginValid() && !IsPasswordConfirmed() ) return;
+            if ( !IsLoginValid() && !IsEmailValid() && !IsPasswordConfirmed() ) return;
 
             // Создание пользователя
             User = new User
@@ -39,29 +39,50 @@ namespace Login
             DialogResult = DialogResult.OK;
         }
 
-        private bool IsLoginValid()
+        private bool IsEmailValid()
         {
-            // Если логин (или почта) не введён, то выдать ошибку
-            if ( loginTextBox.Text == "" ) 
+            // Если почта не введена, то выдать ошибку
+            if (emailTextBox.Text == "")
             {
                 emailError.SetError(emailTextBox, "Введите почту");
                 return false;
             }
 
             // Если почта введена некорректно, то выдать ошибку
-            if ( !Utils.IsValidEmail(emailTextBox.Text) ) 
+            if (!Utils.IsValidEmail(emailTextBox.Text))
             {
                 emailError.SetError(emailTextBox, "Введите нормальную почту");
                 return false;
             }
 
-            // Если пользователь с таким логином (такой почтой) уже есть, то выдать ошибку
-            if ( User.ByLogin(emailTextBox.Text) != null) 
+            // Если пользователь с такой почтой уже есть, то выдать ошибку
+            if (User.ByLogin(loginTextBox.Text) != null)
             {
                 emailError.SetError(emailTextBox, "Почта уже занята");
                 return false;
             }
+
             emailError.Clear();
+            return true;
+        }
+
+        private bool IsLoginValid()
+        {
+            // Если логин не введён, то выдать ошибку
+            if ( loginTextBox.Text == "" ) 
+            {
+                loginError.SetError(loginTextBox, "Введите логин");
+                return false;
+            }
+
+            // Если пользователь с таким логином уже есть, то выдать ошибку
+            if ( User.ByLogin(loginTextBox.Text) != null) 
+            {
+                loginError.SetError(loginTextBox, "Логин уже занят");
+                return false;
+            }
+
+            loginError.Clear();
             return true;
         }
 
@@ -113,9 +134,15 @@ namespace Login
 
         private void emailTextBox_TextChanged(object sender, EventArgs e) 
         {
-            // Проверять логин (почту) при изменении текста в поле логина (почты)
-            IsLoginValid(); 
-        } 
+            // Проверять почту при изменении текста в поле почты
+            IsEmailValid();
+        }
+
+        private void loginTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Проверять логин при изменении текста в поле логина
+            IsLoginValid();
+        }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e) 
         {

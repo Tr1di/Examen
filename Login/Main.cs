@@ -31,7 +31,7 @@ namespace Login
             // Диалог авторизации
             var dialog = new LoginDialog();
 
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if ( dialog.ShowDialog() == DialogResult.OK )
             {
                 User = dialog.User;
                 panel1.BackgroundImage = User.Photo;
