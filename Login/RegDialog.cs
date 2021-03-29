@@ -76,7 +76,7 @@ namespace Login
             }
 
             // Если пользователь с таким логином уже есть, то выдать ошибку
-            if ( User.ByLogin(loginTextBox.Text) != null) 
+            if ( User.ByLogin(loginTextBox.Text) != null ) 
             {
                 loginError.SetError(loginTextBox, "Логин уже занят");
                 return false;

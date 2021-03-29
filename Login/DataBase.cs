@@ -14,7 +14,7 @@ namespace Login
         /// <summary>
         /// Сервер базы данных
         /// </summary>
-        private const string DataSource = "ERELID";
+        private const string DataSource = @"ERELID";
 
         /// <summary>
         /// База данных
