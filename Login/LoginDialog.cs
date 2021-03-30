@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Login
@@ -9,7 +10,7 @@ namespace Login
         /// Авторизированный пользователь
         /// </summary>
         public User User { get; private set; }
-
+        
         public LoginDialog()
         {
             InitializeComponent();

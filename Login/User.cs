@@ -50,7 +50,7 @@ namespace Login
 
         public override string ToString()
         {
-            return $"{ Login }";
+            return Login;
         }
 
         /// <summary>

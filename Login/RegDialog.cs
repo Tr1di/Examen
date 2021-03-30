@@ -25,6 +25,7 @@ namespace Login
             User = new User
             {
                 Login = loginTextBox.Text,
+                Email = emailTextBox.Text,
                 Password = Utils.EncryptPassword(passwordTextBox.Text),
                 Photo = panel1.BackgroundImage,
                 Type = typeComboBox.Text

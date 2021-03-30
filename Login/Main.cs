@@ -40,19 +40,23 @@ namespace Login
                 foreach (Panel panel in Controls.OfType<Panel>()) { panel.Show(); }
 
                 // Отобразить функционал, доступный данному типу пользователей
-                // (Скрыть остальной через panel.Hide())
+                // (Скрыть остальной через рольPanel.Hide())
                 switch (User.Type)
                 {
                     case "Директор":
                         // Оставить окно директора
+                        customerPanel.Hide();
                         break;
-                    case "Менеджер":
-                        // Оставить окно менеджера
+                    case "Заказчик":
+                        // Оставить окно заказчика
+                        directorPanel.Hide();
                         break;
                     // И так далее для каждого типа пользователя
                     default:
                         // Что делать для остальных
-                        panel2.Hide();
+                        // Например, скрыть всё
+                        directorPanel.Hide();
+                        customerPanel.Hide();
                         break;
                 }
             }
@@ -80,6 +84,11 @@ namespace Login
         private void button1_Click(object sender, EventArgs e)
         {
             new ToolsForm().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("В разработке", "");
         }
     }
 }
