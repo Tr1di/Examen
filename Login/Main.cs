@@ -5,7 +5,7 @@ namespace Login
 {
     public partial class Main : Form
     {
-        public User User { get; private set; }
+        // public User User { get; private set; }
 
         public Main()
         {
@@ -21,21 +21,21 @@ namespace Login
         private void Login()
         {
             // Пользователь больше не войден в этот профиль
-            User = null;
+            // User = null;
 
             // Скрыть окно, оставив только диалог входа
             Hide();
 
             // Диалог авторизации
-            var dialog = new LoginDialog();
+            // var dialog = new LoginDialog();
 
-            if ( dialog.ShowDialog() == DialogResult.OK )
+            if ( true /* dialog.ShowDialog() == DialogResult.OK */ )
             {
-                User = dialog.User;
-                panel1.BackgroundImage = User.Photo;
-
-                directorPanel.Visible = User.Type == "Директор";
-                customerPanel.Visible = User.Type == "Заказчик";
+                // User = dialog.User;
+                // panel1.BackgroundImage = User.Photo;
+                //
+                // directorPanel.Visible = User.Type == "Директор";
+                // customerPanel.Visible = User.Type == "Заказчик";
             }
             else // Если окно было закрыто без авторизации, то закрыть приложение
             {
@@ -54,12 +54,12 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new ToolsForm().ShowDialog();
+            // Форма инструментов
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("В разработке", "");
+            // Форма заказа
         }
     }
 }

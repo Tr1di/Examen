@@ -75,12 +75,6 @@
   <ItemGroup>
     <Compile Include="DataBase.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="LoginDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginDialog.Designer.cs">
-      <DependentUpon>LoginDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,23 +83,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegDialog.Designer.cs">
-      <DependentUpon>RegDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tool.cs" />
-    <Compile Include="ToolsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ToolsForm.Designer.cs">
-      <DependentUpon>ToolsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs" />
-    <EmbeddedResource Include="LoginDialog.resx">
-      <DependentUpon>LoginDialog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,12 +95,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegDialog.resx">
-      <DependentUpon>RegDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToolsForm.resx">
-      <DependentUpon>ToolsForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
