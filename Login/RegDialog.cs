@@ -35,7 +35,7 @@ namespace Login
             DataBase.Session.Save(User);
 
             // Подтверждение изменений в Базе данных
-            DataBase.Session.Flush(); 
+            DataBase.Session.Flush();
 
             DialogResult = DialogResult.OK;
         }
@@ -104,7 +104,7 @@ namespace Login
             }
 
             // если пароль не надёжен, то выдать ошибку
-            if (!Utils.IsPasswordStrong(passwordTextBox.Text)) 
+            if ( !Utils.IsPasswordStrong(passwordTextBox.Text) ) 
             { 
                 passwordError.SetError(passwordTextBox, "Вы ввели слишком простой пароль");
                 return false;
