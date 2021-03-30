@@ -36,29 +36,8 @@ namespace Login
                 User = dialog.User;
                 panel1.BackgroundImage = User.Photo;
 
-                // Показать все панели, скрытые от текущего пользователя
-                foreach (Panel panel in Controls.OfType<Panel>()) { panel.Show(); }
-
-                // Отобразить функционал, доступный данному типу пользователей
-                // (Скрыть остальной через рольPanel.Hide())
-                switch (User.Type)
-                {
-                    case "Директор":
-                        // Оставить окно директора
-                        customerPanel.Hide();
-                        break;
-                    case "Заказчик":
-                        // Оставить окно заказчика
-                        directorPanel.Hide();
-                        break;
-                    // И так далее для каждого типа пользователя
-                    default:
-                        // Что делать для остальных
-                        // Например, скрыть всё
-                        directorPanel.Hide();
-                        customerPanel.Hide();
-                        break;
-                }
+                directorPanel.Visible = User.Type == "Директор";
+                customerPanel.Visible = User.Type == "Заказчик";
             }
             else // Если окно было закрыто без авторизации, то закрыть приложение
             {
