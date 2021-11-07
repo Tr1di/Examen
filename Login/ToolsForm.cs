@@ -73,13 +73,15 @@ namespace Login
 
         private void deleteToolButton_Click(object sender, EventArgs e)
         {
+            if (toolsList.SelectedItem == null) return;
+            
             DataBase.Session.Delete(toolsList.SelectedItem);
             DataBase.Session.Flush();
 
             UpdateList();
         }
 
-        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        private void SearchParamsChanged(object sender, EventArgs e)
         {
             UpdateList();
         }

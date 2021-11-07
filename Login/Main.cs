@@ -38,7 +38,6 @@ namespace Login
                     case "Менеджер":
                         break;
                     default:
-                        panel2.Hide();
                         break;
                 }
             }

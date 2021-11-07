@@ -55,12 +55,11 @@ namespace Login
         /// Возвращает пользователя по заданному логину
         /// </summary>
         /// <param name="login">Логин искомого пользователя</param>
-        /// <returns>Пользователь с указанным логином</returns>
+        /// <returns>Пользователь с указанным логином или null</returns>
         public static User ByLogin(string login)
         {
             // Select * From User Where User.login = login
-            return DataBase.Session.QueryOver<User>().Where(x => x.Login == login).SingleOrDefault() 
-                   ?? throw new ArgumentException("Логин отсутсвует в Базе данных.");
+            return DataBase.Session.QueryOver<User>().Where(x => x.Login == login).SingleOrDefault();
         }
 
         /// <summary>

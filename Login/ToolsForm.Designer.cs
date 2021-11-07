@@ -241,7 +241,7 @@ namespace Login
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(100, 20);
             this.searchTextBox.TabIndex = 24;
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            this.searchTextBox.TextChanged += new System.EventHandler(this.SearchParamsChanged);
             // 
             // searchLabel
             // 
@@ -302,6 +302,7 @@ namespace Login
             this.checkBox1.TabIndex = 28;
             this.checkBox1.Text = "Desc";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.SearchParamsChanged);
             // 
             // comboBox4
             // 
@@ -310,6 +311,7 @@ namespace Login
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(65, 21);
             this.comboBox4.TabIndex = 27;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.SearchParamsChanged);
             // 
             // orderLabel
             // 

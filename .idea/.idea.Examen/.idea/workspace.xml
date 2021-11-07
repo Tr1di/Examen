@@ -5,34 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e2d02db-9462-42ca-89c6-82ec1c0c876d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Examen/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Examen/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Examen/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Examen/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Examen/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen.sln.DotSettings.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login.sln.DotSettings.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/Login/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/DataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/DataBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Examen.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Examen.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/LoginDialog.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/LoginDialog.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/LoginDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/LoginDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Main.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Examen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Examen/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/RegDialog.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/RegDialog.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/RegDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/RegDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Tool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Tool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/ToolsForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/ToolsForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/ToolsForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/ToolsForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Utils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/bin/Debug/Login.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Login/bin/Debug/Login.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/bin/Debug/Login.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/Login/bin/Debug/Login.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/bin/Debug/Login.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Login/bin/Debug/Login.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Login/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Login/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/obj/Debug/Examen.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Login/obj/Debug/Examen.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/obj/Debug/Login.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Login/obj/Debug/Login.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/obj/Debug/Login.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Login/obj/Debug/Login.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +18,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://U:/Projects/Visual Studio/Login/Login/LoginDialog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://U:/Projects/Visual Studio/Login/Login/LoginDialog.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -95,13 +76,43 @@
       <workItem from="1636311200752" duration="949000" />
       <workItem from="1636312160712" duration="44000" />
       <workItem from="1636312214491" duration="877000" />
+      <workItem from="1636313129095" duration="1644000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1636313170482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636313170482</updated>
+    </task>
+    <task id="LOCAL-00002" summary="hz">
+      <created>1636313216656</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636313216656</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="hz" />
+    <option name="LAST_COMMIT_MESSAGE" value="hz" />
   </component>
 </project>
