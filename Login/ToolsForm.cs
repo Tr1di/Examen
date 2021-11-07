@@ -1,61 +1,86 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Login
 {
+    enum OrderField
+    {
+        Name,
+        PurchaseDate
+    }
+
     public partial class ToolsForm : Form
     {
+        private String SearchText => searchTextBox.Text;
+        private OrderField OrderBy => (OrderField)comboBox4.SelectedIndex;
+        private bool OrderDesc => checkBox1.Checked;
+        
         public ToolsForm()
         {
             InitializeComponent();
 
-            // Обновить список инструментов
+            comboBox4.DataSource = Enum.GetValues(typeof(OrderField));
+            comboBox4.SelectedIndex = 0;
+            
             UpdateList();
 
-            // Отобразить всех пользователей в списке
             usersComboBox.DataSource = User.GetAll();
         }
 
+        /// <summary>
+        /// Обновление списка инструментов
+        /// </summary>
         private void UpdateList()
         {
-            // Отобразить все инструментов в списке
-            listBox1.DataSource = DataBase.Session.Query<Tool>().ToList();
+            var query = DataBase.Session.Query<Tool>();
+            
+            if (!string.IsNullOrEmpty(SearchText))
+            {
+                query = query.Where(x => x.Name.Contains(SearchText) || x.Description.Contains(SearchText));
+            }
+
+            var ordered = query.OrderBy(x => x.Name);
+            
+            switch (OrderBy)
+            {
+                case OrderField.Name:
+                    if (OrderDesc) query.OrderByDescending(x => x.Name);
+                    break;
+                case OrderField.PurchaseDate:
+                    if (OrderDesc) query.OrderByDescending(x => x.Purchased);
+                    else query.OrderBy(x => x.Purchased);
+                    break;
+            }
+            
+            toolsList.DataSource = ordered.ToList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
-            // Создание и сохранение нового инструмента
             DataBase.Session.Save(new Tool
             {
+                Name = textBox1.Text,
                 Description = richTextBox1.Text,
-                Kupleno = dateTimePicker1.Value,
-                Kolichestvo = (int)numericUpDown1.Value,
+                Purchased = dateTimePicker1.Value,
+                Count = (int)numericUpDown1.Value,
                 Owner = usersComboBox.SelectedItem as User
             });
-
-            // Подтвердить изменения
             DataBase.Session.Flush();
 
-            // Обновить список инструментов
             UpdateList();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void deleteToolButton_Click(object sender, EventArgs e)
         {
-            // Удалить выбранный инструмент
-            DataBase.Session.Delete(listBox1.SelectedItem);
-
-            // Подтвердить изменения
+            DataBase.Session.Delete(toolsList.SelectedItem);
             DataBase.Session.Flush();
 
-            // Обновить список инструментов
+            UpdateList();
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
             UpdateList();
         }
     }

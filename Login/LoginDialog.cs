@@ -5,6 +5,9 @@ namespace Login
 {
     public partial class LoginDialog : Form
     {
+        private string Login => emailTextBox.Text;
+        private string Password => passwordTextBox.Text;
+        
         /// <summary>
         /// Авторизированный пользователь
         /// </summary>
@@ -13,31 +16,30 @@ namespace Login
         public LoginDialog()
         {
             InitializeComponent();
+            DialogResult = DialogResult.OK;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-            // Поиск пользователя по логину (почте)
-            User = User.ByLogin(emailTextBox.Text);
-
-            // Если пользователь найден и пароли совпдают, то войти
-            if (User?.Password == Utils.EncryptPassword(passwordTextBox.Text))
+            User = User.ByLogin(Login);
+            
+            if (User?.Password == Password.EncryptBySHA256())
             {
                 DialogResult = DialogResult.OK;
             }
-            else // Иначе выдать оишбку
+            else
             {
                 MessageBox.Show("Введены некорректные данные.", "Ошибка");
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void registrationButton_Click(object sender, EventArgs e)
         {
             // Диалог регистрации
             var dialog = new RegDialog();
 
             // Если пользователь зарегистрировался, то войти под этим пользователем
-            if (dialog.ShowDialog() != DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 User = dialog.User;
                 DialogResult = DialogResult.OK;

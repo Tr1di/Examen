@@ -30,52 +30,52 @@ namespace Login
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.confirmPasswordLabel = new System.Windows.Forms.Label();
             this.passwordConfirmTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.patronymicLabel = new System.Windows.Forms.Label();
             this.patronymicTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.surnameLabel = new System.Windows.Forms.Label();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.typeComboBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.userTypeLabel = new System.Windows.Forms.Label();
             this.regButton = new System.Windows.Forms.Button();
             this.phoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.passwordError = new System.Windows.Forms.ErrorProvider(this.components);
             this.emailError = new System.Windows.Forms.ErrorProvider(this.components);
             this.confirmPasswordError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.avatarPanel = new System.Windows.Forms.Panel();
+            this.photoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.passwordError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.confirmPasswordError)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // passwordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Password";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(143, 9);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.TabIndex = 7;
+            this.passwordLabel.Text = "Password";
             // 
-            // label1
+            // loginLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Login";
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.Location = new System.Drawing.Point(12, 48);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(33, 13);
+            this.loginLabel.TabIndex = 6;
+            this.loginLabel.Text = "Login";
             // 
             // passwordTextBox
             // 
@@ -93,14 +93,14 @@ namespace Login
             this.loginTextBox.Size = new System.Drawing.Size(125, 20);
             this.loginTextBox.TabIndex = 1;
             // 
-            // label3
+            // confirmPasswordLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(143, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Password Confirm";
+            this.confirmPasswordLabel.AutoSize = true;
+            this.confirmPasswordLabel.Location = new System.Drawing.Point(143, 48);
+            this.confirmPasswordLabel.Name = "confirmPasswordLabel";
+            this.confirmPasswordLabel.Size = new System.Drawing.Size(91, 13);
+            this.confirmPasswordLabel.TabIndex = 9;
+            this.confirmPasswordLabel.Text = "Password Confirm";
             // 
             // passwordConfirmTextBox
             // 
@@ -111,14 +111,14 @@ namespace Login
             this.passwordConfirmTextBox.UseSystemPasswordChar = true;
             this.passwordConfirmTextBox.TextChanged += new System.EventHandler(this.passwordConfirmTextBox_TextChanged);
             // 
-            // label4
+            // emailLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Email";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(12, 9);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(32, 13);
+            this.emailLabel.TabIndex = 11;
+            this.emailLabel.Text = "Email";
             // 
             // emailTextBox
             // 
@@ -128,23 +128,23 @@ namespace Login
             this.emailTextBox.TabIndex = 7;
             this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
-            // label5
+            // phoneLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(143, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Phone";
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Location = new System.Drawing.Point(143, 87);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(38, 13);
+            this.phoneLabel.TabIndex = 13;
+            this.phoneLabel.Text = "Phone";
             // 
-            // label7
+            // patronymicLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Patronymic";
+            this.patronymicLabel.AutoSize = true;
+            this.patronymicLabel.Location = new System.Drawing.Point(12, 165);
+            this.patronymicLabel.Name = "patronymicLabel";
+            this.patronymicLabel.Size = new System.Drawing.Size(59, 13);
+            this.patronymicLabel.TabIndex = 21;
+            this.patronymicLabel.Text = "Patronymic";
             // 
             // patronymicTextBox
             // 
@@ -153,14 +153,14 @@ namespace Login
             this.patronymicTextBox.Size = new System.Drawing.Size(125, 20);
             this.patronymicTextBox.TabIndex = 6;
             // 
-            // label8
+            // nameLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Name";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(12, 126);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.TabIndex = 19;
+            this.nameLabel.Text = "Name";
             // 
             // nameTextBox
             // 
@@ -169,14 +169,14 @@ namespace Login
             this.nameTextBox.Size = new System.Drawing.Size(125, 20);
             this.nameTextBox.TabIndex = 5;
             // 
-            // label9
+            // surnameLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Surname";
+            this.surnameLabel.AutoSize = true;
+            this.surnameLabel.Location = new System.Drawing.Point(12, 87);
+            this.surnameLabel.Name = "surnameLabel";
+            this.surnameLabel.Size = new System.Drawing.Size(49, 13);
+            this.surnameLabel.TabIndex = 17;
+            this.surnameLabel.Text = "Surname";
             // 
             // surnameTextBox
             // 
@@ -198,14 +198,14 @@ namespace Login
             this.typeComboBox.Size = new System.Drawing.Size(125, 21);
             this.typeComboBox.TabIndex = 9;
             // 
-            // label6
+            // userTypeLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(143, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Type";
+            this.userTypeLabel.AutoSize = true;
+            this.userTypeLabel.Location = new System.Drawing.Point(143, 126);
+            this.userTypeLabel.Name = "userTypeLabel";
+            this.userTypeLabel.Size = new System.Drawing.Size(31, 13);
+            this.userTypeLabel.TabIndex = 23;
+            this.userTypeLabel.Text = "Type";
             // 
             // regButton
             // 
@@ -237,49 +237,49 @@ namespace Login
             // 
             this.confirmPasswordError.ContainerControl = this;
             // 
-            // panel1
+            // avatarPanel
             // 
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(275, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(137, 137);
-            this.panel1.TabIndex = 26;
-            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.avatarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.avatarPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.avatarPanel.Location = new System.Drawing.Point(275, 25);
+            this.avatarPanel.Name = "avatarPanel";
+            this.avatarPanel.Size = new System.Drawing.Size(137, 137);
+            this.avatarPanel.TabIndex = 26;
+            this.avatarPanel.Click += new System.EventHandler(this.avatarPanel_Click);
             // 
-            // label10
+            // photoLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(272, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Photo";
+            this.photoLabel.AutoSize = true;
+            this.photoLabel.Location = new System.Drawing.Point(272, 9);
+            this.photoLabel.Name = "photoLabel";
+            this.photoLabel.Size = new System.Drawing.Size(35, 13);
+            this.photoLabel.TabIndex = 27;
+            this.photoLabel.Text = "Photo";
             // 
             // RegDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 216);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.photoLabel);
+            this.Controls.Add(this.avatarPanel);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.regButton);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.userTypeLabel);
             this.Controls.Add(this.typeComboBox);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.patronymicLabel);
             this.Controls.Add(this.patronymicTextBox);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.surnameLabel);
             this.Controls.Add(this.surnameTextBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.phoneLabel);
+            this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.confirmPasswordLabel);
             this.Controls.Add(this.passwordConfirmTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -296,29 +296,29 @@ namespace Login
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox loginTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label confirmPasswordLabel;
         private System.Windows.Forms.TextBox passwordConfirmTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Label patronymicLabel;
         private System.Windows.Forms.TextBox patronymicTextBox;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label surnameLabel;
         private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.ComboBox typeComboBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label userTypeLabel;
         private System.Windows.Forms.Button regButton;
         private System.Windows.Forms.MaskedTextBox phoneTextBox;
         private System.Windows.Forms.ErrorProvider passwordError;
         private System.Windows.Forms.ErrorProvider emailError;
         private System.Windows.Forms.ErrorProvider confirmPasswordError;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label photoLabel;
+        private System.Windows.Forms.Panel avatarPanel;
     }
 }

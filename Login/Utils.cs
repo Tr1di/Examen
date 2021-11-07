@@ -1,12 +1,20 @@
-﻿using System;
-using System.ComponentModel;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Login
 {
+    public enum PasswordStrength
+    {
+        None,
+        VeryWeak,
+        Weak,
+        Medium,
+        Strong,
+        VeryStrong
+    }
+    
     /// <summary>
     /// Набор полезных функций
     /// </summary>
@@ -16,25 +24,32 @@ namespace Login
         /// Проверка пароля на надёжность
         /// </summary>
         /// <param name="password">Пароль, который необходимо проверить</param>
-        /// <returns>true, если пароль надёжен, иначе - false</returns>
-        public static bool IsPasswordStrong(string password)
+        /// <returns>Значение типа PasswordStrength</returns>
+        public static PasswordStrength GetPasswordStrength(this string password)
         {
+            if (string.IsNullOrEmpty(password))
+            {
+                return PasswordStrength.None;
+            }
+
+            PasswordStrength result = PasswordStrength.None;
+            
             // Пароль должен быть не меньше 5 символов
-            if (password.Length < 5) return false;
+            if (password.Length > 4) result++;
 
             // Пароль должен содержать строчные буквы
-            if (!Regex.IsMatch(password, @"[a-z]")) return false; 
+            if (Regex.IsMatch(password, @"[a-z]")) result++; 
 
             // Пароль должен содержать прописные буквы
-            if (!Regex.IsMatch(password, @"[A-Z]")) return false;
+            if (Regex.IsMatch(password, @"[A-Z]")) result++;
 
             // Пароль должен содержать цифры
-            if (!Regex.IsMatch(password, @"\d+")) return false;
+            if (Regex.IsMatch(password, @"\d+")) result++;
 
-            // Пароль должен содержать различные символы (перечислить необходимые через запятую в []) 
-            if (!Regex.IsMatch(password, @"[_, ?, \\]")) return false;
+            // Пароль должен содержать различные символы, перечисленные в [...] 
+            if (Regex.IsMatch(password, @"[_, ?, \\]")) result++;
 
-            return true;
+            return result;
         }
 
         /// <summary>
@@ -42,7 +57,7 @@ namespace Login
         /// </summary>
         /// <param name="password">Пароль, который нужно зашифровать</param>
         /// <returns>Зашифрованный пароль</returns>
-        public static string EncryptPassword(string password)
+        public static string EncryptBySHA256(this string password)
         {
             using (var encrypt = SHA256.Create())
             {
@@ -62,16 +77,14 @@ namespace Login
         /// </summary>
         /// <param name="email">Предполагаемая почта</param>
         /// <returns>true, если это почта, иначе - false</returns>
-        public static bool IsValidEmail(string email)
+        public static bool IsValidEmail(this string email)
         {
             try
             {
-                // Создаём из поданной строки почту и сверяем с начальным результатом
                 return new MailAddress(email).Address == email;
             }
             catch
             {
-                // Любая ошибка означает, что почта введена некорректно
                 return false;
             }
         }
